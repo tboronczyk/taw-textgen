@@ -1,0 +1,56 @@
+body {
+  color: #414141;
+  font-family: sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  color: #212121;
+}
+
+button, input, select {
+  padding: 5px;
+}
+
+input[type=number] {
+  width: 4em;
+}
+
+button {
+  width: 90px;
+}
+
+canvas {
+  border: 1px solid #777B7E;
+  border-radius: 8px;
+}
+
+img {
+  border: 1px solid #777B7E;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.button {
+  color: #616161;
+}
+
+.control {
+  display: inline-block;
+  margin: 8px 0;
+}
+
+#output-log {
+  justify-content: flex-start;
+}
+
+.log-entry {
+  margin: 10px;
+}

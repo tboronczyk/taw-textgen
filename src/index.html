@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Text Generator</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title is-1">Genetic Text Generator</h1>
+      <div class="content">
+        <p>Set the simulation parameters and press <strong>Generate</strong>
+           to generate your text using genetic algorithms.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="control">       
+        <label class="label" for="population-input">Population</label>
+        <input id="population-input" type="number" value="100">
+      </div>
+
+      <div class="control">
+        <label class="label" for="fitness-input">Fitness</label>
+        <select id="fitness-input">
+          <option value="alpha">Alpha</option>
+          <option value="perceptual">Perceptual</option>
+        </select>
+      </div>
+
+      <div class="control">
+        <label class="label" for="frequency-input">Log Freq.</label>
+        <input id="frequency-input" type="number" value="100">
+      </div>
+
+      <div class="control">
+        <label class="label" for="text-input">Text</label>
+        <input id="text-input" type="text">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="control">
+        <button id="generate-button" data-label="Generate">Generate</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="control">
+        <div class="label">Target</div>
+        <div>
+          <canvas id="canvas-a" class="canvas" height="100" width="400"></canvas>
+        </div>
+      </div>
+
+      <div class="control">
+        <div class="label">Current</div>
+        <div>
+          <canvas id="canvas-b" class="canvas" height="100" width="400"></canvas>
+        </div>
+        <div>
+          <span class="label">Generation</span>
+          <span id="current-generation">0</span>
+          <br>
+          <span class="label">MSE</span>
+          <span id="current-fitness">∞</span>
+        </div>
+      </div>
+    </div>
+
+    <template id="output-log-template">
+      <div class="log-entry">
+        <img class="img" width="200" height="50">
+        <br>
+        <span class="label">
+          Generation
+          <span class="output-generation"></span>
+        </span>
+        <br>
+        <span class="label">
+          MSE
+          <span class="output-fitness"></span>
+        </span>
+      </div>
+    </template>
+
+	<div id="output-log" class="container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
